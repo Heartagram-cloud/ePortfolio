@@ -1,0 +1,111 @@
+PS C:\Users\vagrant> Get-WinEvent *Sysmon* |` where { $_.message -like "*T1059*" -or ` $_.message -like "*T1053.005*" -or ` $_.message -like "*T1204*" -or ` $_.message -like "*T1047*" } | `select –first 1 | format-list
+
+TimeCreated  : 8/21/2024 11:26:44 PM
+ProviderName : Microsoft-Windows-Sysmon
+Id           : 1
+Message      : Process Create:
+               RuleName: technique_id=T1059.001,technique_name=PowerShell
+               UtcTime: 2024-08-21 13:26:44.154
+               ProcessGuid: {8a79a039-eb14-66c5-2908-000000001800}
+               ProcessId: 5188
+               Image: C:\Windows\System32\HOSTNAME.EXE
+               FileVersion: 10.0.20348.2520 (WinBuild.160101.0800)
+               Description: Hostname APP
+               Product: Microsoft® Windows® Operating System
+               Company: Microsoft Corporation
+               OriginalFileName: hostname.exe
+               CommandLine: "C:\Windows\system32\HOSTNAME.EXE"
+               CurrentDirectory: C:\Users\vagrant\
+               User: DC\vagrant
+               LogonGuid: {8a79a039-95fd-66c1-dd53-050000000000}
+               LogonId: 0x553DD
+               TerminalSessionId: 1
+               IntegrityLevel: High
+               Hashes: SHA1=0FA07D8B21DF55D76AE18C7EC70580DAE7181DED,MD5=10CFD9D6D601BE73F26776B0152F60AF,SHA256=2BD4C8E67A0737780D481516CD49102184826DFEA49F8ABDDEA5F025134F9204,IMPHASH=23013EDF627646AB5226D15AC880BAD8
+               ParentProcessGuid: {8a79a039-eb12-66c5-2408-000000001800}
+               ParentProcessId: 2720
+               ParentImage: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+               ParentCommandLine: "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
+               ParentUser: DC\vagrant
+
+PS C:\Users\vagrant> nmap -v -A scanme.nmap.org
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-08-21 23:36 E. Australia Standard Time
+NSE: Loaded 157 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 23:36
+Completed NSE at 23:36, 0.00s elapsed
+Initiating NSE at 23:36
+Completed NSE at 23:36, 0.00s elapsed
+Initiating NSE at 23:36
+Completed NSE at 23:36, 0.00s elapsed
+Failed to resolve "scanme.nmap.org".
+NSE: Script Post-scanning.
+Initiating NSE at 23:36
+Completed NSE at 23:36, 0.00s elapsed
+Initiating NSE at 23:36
+Completed NSE at 23:36, 0.00s elapsed
+Initiating NSE at 23:36
+Completed NSE at 23:36, 0.00s elapsed
+Read data files from: C:\Program Files (x86)\Nmap
+WARNING: No targets were specified, so 0 hosts scanned.
+Nmap done: 0 IP addresses (0 hosts up) scanned in 11.38 seconds
+           Raw packets sent: 0 (0B) | Rcvd: 0 (0B)
+PS C:\Users\vagrant> Get-NetIpAddress
+
+IPAddress         : ::1
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 128
+PrefixOrigin      : WellKnown
+SuffixOrigin      : WellKnown
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 10.0.2.15
+InterfaceIndex    : 18
+InterfaceAlias    : Ethernet 4
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 24
+PrefixOrigin      : Dhcp
+SuffixOrigin      : Dhcp
+AddressState      : Preferred
+ValidLifetime     : 17:43:33
+PreferredLifetime : 17:43:33
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 192.168.56.50
+InterfaceIndex    : 4
+InterfaceAlias    : Ethernet 3
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 24
+PrefixOrigin      : Manual
+SuffixOrigin      : Manual
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 127.0.0.1
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 8
+PrefixOrigin      : WellKnown
+SuffixOrigin      : WellKnown
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+PS C:\Users\vagrant>
