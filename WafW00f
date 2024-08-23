@@ -1,0 +1,40 @@
+PS C:\Users\vagrant> cd wafw00f
+PS C:\Users\vagrant\wafw00f> wafw00f www.amazon.com
+
+                   ______
+                  /      \
+                 (  Woof! )
+                  \  ____/                      )
+                  ,,                           ) (_
+             .-. -    _______                 ( |__|
+            ()``; |==|_______)                .)|__|
+            / ('        /|\                  (  |__|
+        (  /  )        / | \                  . |__|
+         \(_)_))      /  |  \                   |__|
+
+                    ~ WAFW00F : v2.2.0 ~
+    The Web Application Firewall Fingerprinting Toolkit
+
+[*] Checking https://www.amazon.com
+[+] The site https://www.amazon.com is behind Cloudfront (Amazon) WAF.
+[~] Number of requests: 2
+PS C:\Users\vagrant\wafw00f> wafw00f cqu.edu.au
+
+                   ______
+                  /      \
+                 (  Woof! )
+                  \  ____/                      )
+                  ,,                           ) (_
+             .-. -    _______                 ( |__|
+            ()``; |==|_______)                .)|__|
+            / ('        /|\                  (  |__|
+        (  /  )        / | \                  . |__|
+         \(_)_))      /  |  \                   |__|
+
+                    ~ WAFW00F : v2.2.0 ~
+    The Web Application Firewall Fingerprinting Toolkit
+
+[*] Checking https://cqu.edu.au
+[+] The site https://cqu.edu.au is behind Azure Front Door (Microsoft) WAF.
+[~] Number of requests: 2
+PS C:\Users\vagrant\wafw00f>
