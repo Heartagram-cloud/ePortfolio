@@ -1,0 +1,16 @@
+Loading personal and system profiles took 1606ms.
+PS C:\Users\vagrant> nmap 192.168.56.50
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-08-23 13:15 E. Australia Standard Time
+Nmap scan report for DC (192.168.56.50)
+Host is up (0.00067s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+5357/tcp open  wsdapi
+5985/tcp open  wsman
+
+Nmap done: 1 IP address (1 host up) scanned in 5.14 seconds
+PS C:\Users\vagrant>
