@@ -50,6 +50,7 @@ Read data files from: C:\Program Files (x86)\Nmap
 WARNING: No targets were specified, so 0 hosts scanned.
 Nmap done: 0 IP addresses (0 hosts up) scanned in 11.38 seconds
            Raw packets sent: 0 (0B) | Rcvd: 0 (0B)
+
 PS C:\Users\vagrant> Get-NetIpAddress
 
 IPAddress         : ::1
