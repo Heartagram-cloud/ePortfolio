@@ -1,0 +1,21 @@
+PS C:\Users\vagrant> nmap --script rmi-vul-classloader -p 445 192.168.56.50
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-08-23 13:25 E. Australia Standard Time
+NSE: failed to initialize the script engine:
+C:\Program Files (x86)\Nmap/nse_main.lua:829: 'rmi-vul-classloader' did not match a category, filename, or directory
+stack traceback:
+        [C]: in function 'error'
+        C:\Program Files (x86)\Nmap/nse_main.lua:829: in local 'get_chosen_scripts'
+        C:\Program Files (x86)\Nmap/nse_main.lua:1364: in main chunk
+        [C]: in ?
+
+QUITTING!
+PS C:\Users\vagrant>  nmap --script rmi-vuln-classloader -p 445 192.168.56.50
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-08-23 13:25 E. Australia Standard Time
+Nmap scan report for DC (192.168.56.50)
+Host is up (0.00s latency).
+
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+
+Nmap done: 1 IP address (1 host up) scanned in 4.73 seconds
+PS C:\Users\vagrant>
